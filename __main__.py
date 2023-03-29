@@ -5,7 +5,7 @@ import os
 from pulumi import FileAsset, Output, export
 from pulumi_aws import s3
 
-web_bucket = s3.Bucket('s3-website-bucket',
+web_bucket = s3.Bucket('s3-workshop-bucket',
     website=s3.BucketWebsiteArgs(
         index_document="index.html",
     ))

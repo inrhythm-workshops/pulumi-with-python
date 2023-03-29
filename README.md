@@ -40,7 +40,7 @@ with `***`.
 
         Type                    Name                  Plan       
     +   pulumi:pulumi:Stack     aws-py-s3-folder-dev  create     
-    +   ├─ aws:s3:Bucket        s3-website-bucket     create     
+    +   ├─ aws:s3:Bucket        s3-workshop-bucket     create     
     +   ├─ aws:s3:BucketObject  index.html            create     
     +   ├─ aws:s3:BucketObject  python.png            create     
     +   ├─ aws:s3:BucketObject  favicon.png           create     
@@ -61,7 +61,7 @@ with `***`.
     $ pulumi stack output
     Current stack outputs (2):
         OUTPUT                                           VALUE
-        bucket_name                                      s3-website-bucket-***
+        bucket_name                                      s3-workshop-bucket-***
         website_url                                      ***.s3-website-us-east-1.amazonaws.com
     ```
 
