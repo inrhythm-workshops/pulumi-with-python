@@ -39,7 +39,7 @@ with `***`.
     Previewing update (dev):
 
         Type                    Name                  Plan       
-    +   pulumi:pulumi:Stack     aws-py-s3-folder-dev  create     
+    +   pulumi:pulumi:Stack     propel-workshop-project  create     
     +   ├─ aws:s3:Bucket        s3-workshop-bucket     create     
     +   ├─ aws:s3:BucketObject  index.html            create     
     +   ├─ aws:s3:BucketObject  python.png            create     
@@ -77,7 +77,7 @@ with `***`.
 
     ```bash
     $ pulumi stack output website_url
-    ***.s3-website-us-west-2.amazonaws.com
+    ***.s3-workshop-us-east-1.amazonaws.com
     ```
 
 1. To clean up resources, run `pulumi destroy` and answer the confirmation question at the prompt.
