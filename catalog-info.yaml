@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: pulumi-with-python
+  description: Example project deploying static website to AWS S3 bucket
+  annotations:
+    github.com/project-slug: inrhythm-workshops/pulumi-with-python
+
+spec:
+  type: service
+  lifecycle: production
+  owner: user:guest
