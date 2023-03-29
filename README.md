@@ -62,7 +62,7 @@ with `***`.
     Current stack outputs (2):
         OUTPUT                                           VALUE
         bucket_name                                      s3-website-bucket-***
-        website_url                                      ***.s3-website-us-west-2.amazonaws.com
+        website_url                                      ***.s3-website-us-east-1.amazonaws.com
     ```
 
 1. To see that the S3 objects exist, you can either use the AWS Console or the AWS CLI:
