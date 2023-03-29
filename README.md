@@ -5,6 +5,15 @@
 A static website that uses [S3's website support](https://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html).
 For a detailed walkthrough of this example, see the tutorial [Static Website on AWS S3](https://www.pulumi.com/docs/tutorials/aws/s3-website/).
 
+## Prerequisites
+Before we begin, make sure you have the following:
+
+|Name|Version|Notes|
+|----|-------|-----|
+|[Python](https://www.python.org/downloads/)|3.7 or greater | 3.11.2 is recommended and used for this demo|
+|[Pulumi](https://www.pulumi.com/docs/get-started/install/)|3.60.0|This is the version being used for this demo|
+|AWS keys||Credentials should have been provided prior. Please reach out if you have not received yours|
+
 ## Deploying and running the program
 
 Note: some values in this example will be different from run to run.  These values are indicated
