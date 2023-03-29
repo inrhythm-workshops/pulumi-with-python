@@ -1,15 +1,16 @@
-import json
 import mimetypes
 import os
 
 from pulumi import FileAsset, Output, export
 from pulumi_aws import s3
 
+# setup the s3 bucket
 web_bucket = s3.Bucket('s3-website-bucket',
     website=s3.BucketWebsiteArgs(
         index_document="index.html",
     ))
 
+# iterate over files in "www" directory and creating s3 BucketObjects
 content_dir = "www"
 for file in os.listdir(content_dir):
     filepath = os.path.join(content_dir, file)
@@ -19,6 +20,7 @@ for file in os.listdir(content_dir):
         source=FileAsset(filepath),
         content_type=mime_type)
 
+# defining public read policy so we can access our static site
 def public_read_policy_for_bucket(bucket_name):
     return Output.json_dumps({
         "Version": "2012-10-17",
@@ -34,6 +36,7 @@ def public_read_policy_for_bucket(bucket_name):
         }]
     })
 
+# setting bucket values
 bucket_name = web_bucket.id
 bucket_policy = s3.BucketPolicy("bucket-policy",
     bucket=bucket_name,
